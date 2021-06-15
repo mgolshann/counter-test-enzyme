@@ -12,11 +12,14 @@ class App extends React.Component {
     return (
       <div data-test='component-app'>
         <h1 data-test="display-counter">the counter is currently {this.state.counter}</h1>
-        <button data-test="increment-button">increament</button>
-      </div>
+        <button
+          onClick={() => this.setState({ counter: this.state.counter + 1 })}
+          data-test="increment-button">
+            increament</button>
+      </div >
     );
   }
-  
+
 }
 
 export default App;
